@@ -59,11 +59,15 @@ check_online_exported_device(){
 export_device(){
   devices=$(get_opkg_service_config usbip devices)
   set_opkg_service_config usbip devices "$devices :$1:"
+  /opt/bin/bind_driver --usbip $1
+  usbip_list
 }
 
 unexport_device(){
   devices=$(get_opkg_service_config usbip devices | sed "s/:$1://g")
   set_opkg_service_config usbip devices "$devices"
+  /opt/bin/bind_driver --other $1
+  usbip_list
 }
 
 %>

@@ -5,8 +5,6 @@ RETVAL=0
 
 ENABLED=`grep "^enabled=" /opt/etc/config/usbip | cut -d = -f 2`
 
-echo $ENABLED > /tmp/usbip-enabled
-
 start() {
     if [ $ENABLED -eq 1 ]; then
       echo "Starting USB/IP"
