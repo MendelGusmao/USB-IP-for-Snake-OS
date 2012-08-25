@@ -39,7 +39,6 @@ usbip-clean:
 	rm -f usbip.opk
 	rm -rf data/bin
 	rm -rf data/lib
-	rm -rf data/share
 	rm -rf data/include
 	rm -f control.tar.gz
 	rm -f data.tar.gz
