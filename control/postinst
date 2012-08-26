@@ -1,7 +1,7 @@
 #!/bin/sh
 
 MODULES_DEP=/opt/lib/modules/$(uname -r)/modules.dep
-MODULES_DEP_LINE="usbip/usbip.ko: usbip/usbip_common_mod.ko usbip/vhci-hcd.ko"
+MODULES_DEP_LINE="usbip/usbip.ko: usbip/vhci-hcd.ko usbip/usbip_common_mod.ko"
 EXTRAMODULES=/opt/etc/config/extramodules
 
 echo "Installing USB/IP kernel modules"
