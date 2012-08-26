@@ -10,7 +10,7 @@ if [ -x /opt/etc/init.d/usbip ]; then
   echo "Removing USB/IP kernel modules"
   sed -i "s/usbip//" $EXTRAMODULES
 
-  MODULES_DEP_LINE="usbip/usbip.ko: usbip/usbip_common_mod.ko usbip/vhci-hcd.ko"
+  MODULES_DEP_LINE="usbip/usbip.ko: usbip/vhci-hcd.ko usbip/usbip_common_mod.ko"
   sed -i "s%$MODULES_DEP_LINE%%" $MODULES_DEP
   sed -i '/^$/d' $MODULES_DEP
 
